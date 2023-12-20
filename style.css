@@ -1,0 +1,198 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between; /* Adicionado para melhor espaçamento entre o logo e os itens da navegação */
+    align-items: center;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    text-decoration: none; /* Removido para evitar sublinhado do link */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px; /* Ajustado para um espaçamento mais consistente entre os itens de navegação */
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px; /* Adicionado para um melhor espaçamento dentro dos itens de navegação */
+}
+
+/* Adicionado estilo para hover nos itens de navegação */
+nav a:hover {
+    background-color: purple;
+    border-radius: 5px;
+}
+
+/* Adicione a classe .sticky */
+nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    
+    
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 5px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -130%);
+    text-align: left;
+    max-width: 600px;
+    width: 90%;
+    padding: 0 20px;
+    
+    
+}
+
+.text-box p {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.text-loc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(50%, -50%); */
+    text-align: left;
+    max-width: 600px;
+    width: 90%;
+    padding: 0 20px;
+    
+}
+
+.text-loc p {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+
+.destaque {
+    color: rebeccapurple; /* Cor de destaque */
+    font-weight: bold; /* Texto em negrito para dar destaque */
+    font-size: 58px; /* Tamanho de fonte maior para destacar ainda mais */
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: black;
+}
+
+.button {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+.button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+.button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+
+
+@media screen and (max-width: 600px) {
+    nav li {
+        float: none;
+        margin-right: 0;
+        text-align: center;
+        margin-top: 10px; /* Adicionado um espaçamento superior para melhorar a aparência em telas menores */
+    }
+
+    .text-box {
+        left: 10%; /* Ajuste da posição à esquerda para melhorar a aparência em telas menores */
+        text-align: center;
+    }
+
+    .text-box p {
+        font-size: 18px; /* Ajuste de tamanho de fonte para telas menores */
+        margin-bottom: 10px; /* Ajuste de espaçamento inferior para telas menores */
+    }
+
+    .destaque {
+        font-size: 24px; /* Ajuste de tamanho de fonte para telas menores */
+    }
+}
+
